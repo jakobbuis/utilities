@@ -4,5 +4,5 @@ set -euo pipefail
 git fetch
 git checkout master
 git merge origin/master --ff
-git checkout develop
-git merge origin/develop --ff
+git checkout development
+git merge origin/development --ff
