@@ -1,0 +1,21 @@
+#!/bin/bash
+set -euo pipefail
+
+TICKET=${1:-}
+DESCRIPTION=${2:-}
+
+# must pass ticket number
+if [[ -z "$TICKET" ]]; then
+    echo "Usage: vfs [ticket number] [description]"
+    echo "If you don't have a ticket number, use X"
+    echo "Description is optional, use kebab-case"
+    exit 1
+fi
+
+update_local
+git checkout master
+if [[ -z "$DESCRIPTION" ]]; then
+    git checkout -b VF-$TICKET
+else
+    git checkout -b VF-$TICKET-$DESCRIPTION
+fi
