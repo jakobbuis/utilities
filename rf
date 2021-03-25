@@ -13,3 +13,4 @@ git branch -D $RELEASE_BRANCH
 git checkout development
 git merge master
 git push origin development
+git checkout master
