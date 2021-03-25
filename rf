@@ -5,7 +5,7 @@ update_local
 git checkout master
 RELEASE_BRANCH=$(git branch --list 'release/v*' | xargs)
 git merge RELEASE_BRANCH
-RELEASE_TAG=${RELEASE_BRANCH:7}
+RELEASE_TAG=${RELEASE_BRANCH:8}
 git tag -a $RELEASE_TAG
 git push origin master
 git push --tags
