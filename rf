@@ -1,0 +1,15 @@
+#!/bin/bash
+set -euo pipefail
+
+update_local
+git checkout master
+RELEASE_BRANCH=$(git branch --list 'release/v*')
+git merge RELEASE_BRANCH
+RELEASE_TAG=${RELEASE_BRANCH:7}
+git tag $RELEASE_TAG
+git push origin master
+git push --tags
+git branch -D $RELEASE_BRANCH
+git checkout development
+git merge master
+git push origin development
