@@ -4,13 +4,13 @@ set -euo pipefail
 update_local
 git checkout master
 RELEASE_BRANCH=$(git branch --list 'release/v*' | xargs)
-git merge $RELEASE_BRANCH
+git merge $RELEASE_BRANCH --no-ff
 RELEASE_TAG=${RELEASE_BRANCH:8}
 git tag -a $RELEASE_TAG
 git push origin master
 git push --tags
 git branch -D $RELEASE_BRANCH
 git checkout development
-git merge master
+git merge master --no-ff
 git push origin development
 git checkout master
