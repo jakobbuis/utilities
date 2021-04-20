@@ -14,11 +14,11 @@ These utilities, especially the `vagrant_*` commands, make a couple of assumptio
 
 ## Available utilities
 
-### Provision a vagrant site
+### Bring master and develop up to date
 ```bash
-vagrant_provision [name]
+update_local
 ```
-Update Laravel Homestead configuration for the project, and open it in your browser.
+Fetches changes, and brings your develop and master branch up to date.
 
 ### Ensure vagrant is running
 ```bash
@@ -32,8 +32,8 @@ vagrant_open
 ```
 Opens a ssh-connection to your default homestead install from any directory. Once logged-in to the vagrant machine, this will immediately run `cd code/{dirname}` where dirname is the name of the current folder you're in.
 
-### Bring master and develop up to date
+### Provision a vagrant site
 ```bash
-update_local
+vagrant_provision [name]
 ```
-Fetches changes, and brings your develop and master branch up to date.
+Update Laravel Homestead configuration for the project, and open it in your browser.
