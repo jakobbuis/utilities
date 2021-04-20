@@ -14,12 +14,6 @@ These utilities, especially the `vagrant_*` commands, make a couple of assumptio
 
 ## Available utilities
 
-### Update composer dependencies
-```bash
-composer_minor_updates
-```
-Automatically installs semver-compatible upgrades and commits the result with a commit message of "composer minor upgrades". Run in the root-folder of your project.
-
 ### Provision a vagrant site
 ```bash
 vagrant_provision [name]
