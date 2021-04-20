@@ -14,6 +14,18 @@ These utilities, especially the `vagrant_*` commands, make a couple of assumptio
 
 ## Available utilities
 
+### Finish a release branch
+```bash
+rf
+```
+Fetches changes, and merges and pushes a finished release branch to the appropriate targets.
+
+### Start a release branch
+```bash
+rs
+```
+Fetches changes, and starts a release branch with the right number automatically.
+
 ### Bring master and develop up to date
 ```bash
 update_local
@@ -37,3 +49,10 @@ Opens a ssh-connection to your default homestead install from any directory. Onc
 vagrant_provision [name]
 ```
 Update Laravel Homestead configuration for the project, and open it in your browser.
+
+### Start a new feature
+```bash
+vfs [ticket number] [description]
+vfs [ticket number]
+```
+Fetches changes, and creates a new feature branch using common conventions. The description is optional, and must be in kebab-case without the leading dash.
