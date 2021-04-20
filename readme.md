@@ -26,12 +26,6 @@ composer_minor_updates
 ```
 Automatically installs semver-compatible upgrades and commits the result with a commit message of "composer minor upgrades". Run in the root-folder of your project.
 
-### Deploy to Production
-```bash
-deploy_production [server] [username]
-```
-Login to the production account, update the code, install composer dependencies. *Only use this to deploy projects which do not have deployer setup (legacy projects).* This process will clear caches where appropriate. Use only the server number in the command, e.g. `deploy_production 03 accrpas`.
-
 ### Provision a vagrant site
 ```bash
 vagrant_provision [name]
